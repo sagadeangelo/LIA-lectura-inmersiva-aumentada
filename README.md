@@ -94,3 +94,11 @@ Proyecto desarrollado por [Miguel Tovar Amral](https://github.com/sagadeangelo) 
 ## 📄 Licencia
 
 Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+
+---
+
+## 📬 Contacto
+
+- Correo: miguel@sagadeangelo.com
+- Sitio web: [https://lasagadeangelo.com.mx](https://lasagadeangelo.com.mx)
+
