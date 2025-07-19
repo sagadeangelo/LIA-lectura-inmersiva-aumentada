@@ -136,3 +136,6 @@ venv/
 # Carpetas de trabajo temporales
 logs/
 tmp/
+
+# Permitir notebooks en la carpeta notebooks/
+!notebooks/*.ipynb
