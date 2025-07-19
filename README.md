@@ -1,63 +1,96 @@
-<p align="center">
- <p align="center">
-  <img src="banner_lia.png" alt="LIA – Lectura Inmersiva Aumentada" width="100%" />
-</p>
+# LIA – Lectura Inmersiva Aumentada
 
-# LIA – Lectura Inmersiva Aumentada 📚🔊✨
-
-**LIA** es una aplicación Flutter diseñada para transformar la lectura tradicional en una experiencia inmersiva, reactiva y multisensorial. A medida que el lector avanza en voz alta, se activan animaciones, sonidos y efectos visuales sincronizados con el texto, haciendo que cada página cobre vida.
+Proyecto educativo que transforma libros en experiencias inmersivas mediante inteligencia artificial. Utiliza Flutter para la interfaz, Python para la generación de contenido visual y sonoro, y Stable Diffusion local para crear escenas ilustradas a partir del texto.
 
 ---
 
-## 🚀 Características actuales
+## 🚀 Características principales
 
-- 🎙️ **Lectura por voz**: Avance automático al pronunciar la última palabra de cada página.
-- 🎨 **Animaciones contextuales**: Imágenes y sonidos se activan al detectar palabras clave.
-- 📖 **Modo clásico e inmersivo**: Elige cómo disfrutar cada capítulo.
-- 💾 **Progreso guardado**: Continúa la lectura desde donde la dejaste.
-- 🔄 **Interfaz adaptativa**: Optimizada para móviles, tabletas y pantallas grandes.
-
----
-
-## 🌐 Visión a futuro: Plataforma de lectura colaborativa y comercial
-
-LIA no solo es una app de lectura: será una **plataforma interactiva para autores, lectores y amantes de los libros**. Estas son algunas de las funciones planeadas:
-
-- 🖊️ **Publicación abierta para nuevos autores**: Cualquier escritor podrá subir sus libros a LIA.
-- 💳 **Comercialización de libros**: Los libros podrán ser vendidos directamente en la app.
-- 📚 **Biblioteca social**: Los lectores podrán compartir lecturas, reseñas y recomendaciones.
-- 🏆 **Gamificación del hábito lector**: Los usuarios competirán en niveles de lectura, estadísticas de progreso, desafíos diarios y más.
-- 🧠 **Comunidad lectora con rankings**: ¿Quién leyó más esta semana? ¿Quién desbloqueó más finales alternativos?
+- Lectura inmersiva sincronizada con imágenes generadas por IA.
+- Sonidos ambientales automáticos basados en el contenido del texto.
+- Soporte para múltiples libros, capítulos y escenas.
+- Arquitectura local sin dependencia de servicios externos.
+- Integración con modelos personalizados (`.safetensors`, `.ckpt`, etc.)
 
 ---
 
-## 📱 Tecnología
+## 📁 Estructura del proyecto
 
-Construida con:
+```
+LIA-lectura-inmersiva-aumentada/
+├── libros/              # Archivos .json con libros y escenas
+│   └── [LIBRO]/         # Carpeta por cada libro
+│       ├── escenas/     # Archivos de texto por escena
+│       ├── imagenes/    # Imágenes generadas por IA
+│       ├── sonidos/     # Audios ambientales descargados
+│       └── prompts/     # Prompts generados automáticamente
+├── modelos/             # Modelos IA locales (no incluidos)
+├── lib/                 # Código Flutter principal
+├── scripts/             # Scripts Python de generación
+├── venv/                # Entorno virtual local (ignorado)
+├── .gitignore
+├── README.md
+└── requirements.txt
+```
 
-- **Flutter**
-- `speech_to_text` para reconocimiento de voz
-- `audioplayers` para ambientación sonora
-- `shared_preferences` para guardar progreso
-- Diseño responsive y enfoque en experiencia del usuario
+---
+
+## ⚙️ Tecnologías utilizadas
+
+- **Flutter** – interfaz móvil y de escritorio.
+- **Python 3.11** – backend y automatización.
+- **Stable Diffusion local** – generación de imágenes por escena.
+- **Compel** – prompts IA con mayor precisión.
+- **Pixabay API** – sonidos ambientales libres.
+- **FFmpeg** – conversión y edición de audio.
+- **Git/GitHub** – control de versiones.
 
 ---
 
-## 🧑‍💻 Autor
+## 💾 Instalación local (modo desarrollador)
 
-**Miguel Tovar Amaral**  
-Desarrollador, narrador, visionario creativo.  
-Contacto: **miguel.tovar@lasagadeangelo.com.mx**
+```bash
+git clone https://github.com/sagadeangelo/LIA-lectura-inmersiva-aumentada.git
+cd LIA-lectura-inmersiva-aumentada
+
+# Crear entorno virtual
+python -m venv venv
+venv\Scripts\activate  # En Linux/Mac: source venv/bin/activate
+
+# Instalar dependencias
+pip install -r requirements.txt
+
+# Ejecutar script de generación de imágenes
+python scripts/generar_imagenes_desde_cache.py
+```
 
 ---
 
-## 📜 Licencia y derechos
+## ⚠️ Modelos IA (no incluidos en el repositorio)
 
-> **Todos los derechos reservados.**  
-> Este software y su contenido son propiedad exclusiva de Miguel Tovar Amaral.  
-> **Se prohíbe su reproducción, modificación, distribución o uso comercial sin consentimiento expreso y por escrito del autor.**
+Este repositorio no contiene los modelos IA por su gran tamaño.
 
-Para licencias comerciales o distribución, contactar a:  
-**miguel.tovar@lasagadeangelo.com.mx**  
+Por favor, coloca tus modelos en la siguiente carpeta:
+
+```
+/modelos/
+```
+
+Archivos compatibles:
+- `.safetensors`
+- `.ckpt`
+- `.pth`
+
+Estos archivos deben ser configurados en tu archivo de parámetros JSON correspondiente.
 
 ---
+
+## 🧠 Créditos
+
+Proyecto desarrollado por [Miguel alias sagadeangelo](https://github.com/sagadeangelo) como parte del sistema educativo **LIA OS**.
+
+---
+
+## 📄 Licencia
+
+Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
