@@ -87,7 +87,7 @@ Estos archivos deben ser configurados en tu archivo de parámetros JSON correspo
 
 ## 🧠 Créditos
 
-Proyecto desarrollado por [Miguel alias sagadeangelo](https://github.com/sagadeangelo) como parte del sistema educativo **LIA OS**.
+Proyecto desarrollado por [Miguel Tovar Amral](https://github.com/sagadeangelo) como parte del sistema educativo **LIA OS**.
 
 ---
 
