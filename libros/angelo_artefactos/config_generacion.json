@@ -1,0 +1,12 @@
+{
+  "modelo_base": "realisticVisionV60B1_v51HyperVAE.safetensors",
+  "ruta_modelo_base": "modelos/realistas/realisticVisionV60B1_v51HyperVAE.safetensors",
+  "lora": [
+    {
+      "nombre": "Noerman_Claire_European_American",
+      "archivo": "modelos/realistas/Noerman_Claire_European_American.safetensors",
+      "peso": 0.8
+    }
+  ],
+  "negative_prompt": "blurry, bad anatomy, poorly drawn, deformed, mutated hands, lowres, nsfw"
+}

@@ -1,0 +1,43 @@
+Building wheel torch-2.9.0a0+git89d842f
+-- Building version 2.9.0a0+git89d842f
+C:\PROYECTOS-FLUTTER\LIA-lectura-inmersiva-aumentada\venv\lib\site-packages\setuptools\_distutils\_msvccompiler.py:12: UserWarning: _get_vc_env is private; find an alternative (pypa/distutils#340)
+  warnings.warn(
+cmake -GNinja -DBUILD_PYTHON=True -DBUILD_TEST=True -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=C:\PROYECTOS-FLUTTER\LIA-lectura-inmersiva-aumentada\pytorch\torch -DCMAKE_PREFIX_PATH=C:\PROYECTOS-FLUTTER\LIA-lectura-inmersiva-aumentada\venv\Lib\site-packages -DPython_EXECUTABLE=C:\PROYECTOS-FLUTTER\LIA-lectura-inmersiva-aumentada\venv\Scripts\python.exe -DTORCH_BUILD_VERSION=2.9.0a0+git89d842f -DUSE_NUMPY=True C:\PROYECTOS-FLUTTER\LIA-lectura-inmersiva-aumentada\pytorch
+CMake Deprecation Warning at CMakeLists.txt:9 (cmake_policy):
+  The OLD behavior for policy CMP0126 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+-- The CXX compiler identification is unknown
+-- The C compiler identification is unknown
+CMake Error at CMakeLists.txt:29 (project):
+  The CMAKE_CXX_COMPILER:
+
+    C:/Program Files/Microsoft Visual Studio/2022/Preview/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe
+
+  is not a full path to an existing compiler tool.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CXX" or the CMake cache entry CMAKE_CXX_COMPILER to the full path
+  to the compiler, or to the compiler name if it is in the PATH.
+
+
+CMake Error at CMakeLists.txt:29 (project):
+  The CMAKE_C_COMPILER:
+
+    C:/Program Files/Microsoft Visual Studio/2022/Preview/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe
+
+  is not a full path to an existing compiler tool.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CC" or the CMake cache entry CMAKE_C_COMPILER to the full path to
+  the compiler, or to the compiler name if it is in the PATH.
+
+
+-- Configuring incomplete, errors occurred!
+-- Checkout nccl release tag: v2.27.5-1

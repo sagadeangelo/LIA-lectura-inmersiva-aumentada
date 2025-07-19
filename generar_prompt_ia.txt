@@ -1,0 +1,104 @@
+import os
+import sys
+import requests
+from pathlib import Path
+from generador_prompt_inteligente import generar_prompt_ia
+from safetensors import safe_load
+from transformers import CLIPTextModel, CLIPTokenizer
+
+# ⚙️ Nombre del libro recibido por argumento
+nombre_libro = sys.argv[1] if len(sys.argv) > 1 else "libro_demo"
+
+# 📂 Ruta base
+base_path = Path("libros") / nombre_libro
+escenas_path = base_path / "escenas"
+prompts_path = base_path / "prompts"
+audio_path = base_path / "audios_imagenes"  # Carpeta para almacenar audios e imágenes generados
+
+# 📁 Crear carpetas necesarias si no existen
+prompts_path.mkdir(parents=True, exist_ok=True)
+audio_path.mkdir(parents=True, exist_ok=True)
+
+# ⚡ Cargar modelo de imagen (Stable Diffusion + LoRA)
+model_path = "ruta_a_tu_modelo_LoRA"  # Ruta a tu modelo con LoRA y safetensors
+device = "cuda"  # Usamos GPU (si está disponible)
+
+# Cargar el modelo y el tokenizer de texto
+tokenizer = CLIPTokenizer.from_pretrained("openai/clip-vit-base-patch16")
+text_encoder = CLIPTextModel.from_pretrained("openai/clip-vit-base-patch16").to(device)
+
+# Cargar el modelo de safetensors (Stable Diffusion + LoRA)
+model = safe_load(model_path, device=device)
+
+# 🔁 Recorremos todos los archivos .txt dentro de escenas/
+for archivo in escenas_path.glob("*.txt"):
+    with open(archivo, "r", encoding="utf-8") as f:
+        texto_escena = f.read().strip()
+
+    # 🧠 Generar prompt IA a partir del texto
+    prompt_ia = generar_prompt_ia(texto_escena, estilo="realista", nitidez="alta")
+
+    # 💾 Guardar el prompt generado con el mismo nombre que el archivo de escena
+    prompt_file = prompts_path / archivo.name
+    with open(prompt_file, "w", encoding="utf-8") as f:
+        f.write(prompt_ia)
+
+    print(f"✅ Prompt generado: {prompt_file.name}")
+
+    # **Generar la imagen usando Stable Diffusion + LoRA**
+    def generar_imagen(prompt, output_path):
+        inputs = tokenizer(prompt, return_tensors="pt").to(device)
+        text_embeddings = text_encoder(**inputs).last_hidden_state
+        imagen = model.generate(text_embeddings)
+        imagen.save(output_path)
+        print(f"✅ Imagen guardada en: {output_path}")
+
+    imagen_nombre = f"{prompt_ia[:50].replace(' ', '_')}.png"  # Nombre de archivo basado en el prompt
+    output_path_imagen = audio_path / imagen_nombre
+
+    # Generar la imagen
+    generar_imagen(prompt_ia, output_path_imagen)
+
+    # **Buscar y descargar sonidos usando el prompt**
+    def descargar_sonido(sound_url, carpeta_destino, nombre_archivo):
+        response = requests.get(sound_url)
+        if response.status_code == 200:
+            with open(os.path.join(carpeta_destino, nombre_archivo), 'wb') as f:
+                f.write(response.content)
+            print(f"✅ Sonido guardado: {nombre_archivo}")
+        else:
+            print(f"❌ Error al descargar el sonido: {response.status_code}")
+
+    def buscar_y_descargar_sonidos(query, carpeta_destino, archivo_log, escena_nombre):
+        if not query.strip():
+            print("⚠️  Escena sin palabras clave válidas para sonido, se omite descarga.")
+            archivo_log.write(f"{escena_nombre} => SIN PALABRAS CLAVE\n")
+            return
+
+        url = 'https://freesound.org/apiv2/search/text/'
+        headers = { 'Authorization': f'Bearer {ACCESS_TOKEN}' }
+        params = { 'query': query }
+
+        response = requests.get(url, headers=headers, params=params)
+
+        if response.status_code == 200:
+            data = response.json()
+            for sound in data['results']:
+                if 'previews' in sound and 'preview-hq-mp3' in sound['previews']:
+                    sound_url = sound['previews']['preview-hq-mp3']
+                    nombre_archivo = f"{escena_nombre}.mp3"  # Usar el mismo nombre que la escena
+                    descargar_sonido(sound_url, carpeta_destino, nombre_archivo)
+                    archivo_log.write(f"{escena_nombre} => OK: {nombre_archivo} ({query})\n")
+                    return
+            print(f"🔇 No se encontraron sonidos para '{query}'")
+            archivo_log.write(f"{escena_nombre} => SIN RESULTADOS ({query})\n")
+        else:
+            print(f"❌ Error API: {response.status_code}")
+            archivo_log.write(f"{escena_nombre} => ERROR API ({response.status_code})\n")
+
+    # Buscar y descargar el sonido para el prompt generado
+    archivo_log = open("log_sonidos_imagenes.txt", "a")
+    buscar_y_descargar_sonidos(prompt_ia, audio_path, archivo_log, imagen_nombre)
+    archivo_log.close()
+
+print("✨ Todos los prompts, imágenes y sonidos fueron generados correctamente.")
