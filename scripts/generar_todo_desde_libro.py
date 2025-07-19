@@ -12,10 +12,11 @@ from safetensors.torch import load_file
 from PIL import Image
 import freesound
 import re
+from compel import Compel
 
 # === CONFIG ===
 load_dotenv()
-FREESOUND_API_KEY = os.getenv("FREESOUND_ACCESS_TOKEN")
+FREESOUND_API_KEY = os.getenv("FREESOUND_ACCESS_TOKEN") or os.getenv("FREESOUND_API_KEY")
 if not FREESOUND_API_KEY:
     raise ValueError("FREESOUND_API_KEY no está en .env")
 
@@ -34,6 +35,8 @@ pipe = StableDiffusionPipeline.from_pretrained(
     safety_checker=None,
     variant="fp16" if device == "cuda" else None
 ).to(device)
+
+compel = Compel(tokenizer=pipe.tokenizer, text_encoder=pipe.text_encoder)
 
 # Pesos personalizados (ajusta si es necesario)
 pesos_custom = "modelos/realistas/realisticVisionV60B1_v51HyperVAE.safetensors"
@@ -65,7 +68,8 @@ def generar_prompt(texto):
     return tokenizer.decode(output[0], skip_special_tokens=True).strip()
 
 def generar_imagen(prompt, ruta):
-    img = pipe(prompt, num_inference_steps=30, guidance_scale=7.5).images[0]
+    prompt_embeds = compel(prompt)
+    img = pipe(prompt_embeds=prompt_embeds, num_inference_steps=30, guidance_scale=7.5).images[0]
     img.save(ruta)
 
 def buscar_audio(texto, ruta_salida):
