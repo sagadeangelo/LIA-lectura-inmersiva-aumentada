@@ -15,7 +15,7 @@ import re
 
 # === CONFIG ===
 load_dotenv()
-FREESOUND_API_KEY = os.getenv("FREESOUND_API_KEY")
+FREESOUND_API_KEY = os.getenv("FREESOUND_ACCESS_TOKEN")
 if not FREESOUND_API_KEY:
     raise ValueError("FREESOUND_API_KEY no está en .env")
 
