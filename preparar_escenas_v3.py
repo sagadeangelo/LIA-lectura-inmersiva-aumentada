@@ -5,7 +5,7 @@ from diffusers import StableDiffusionPipeline
 
 # Cargar variables del archivo .env
 load_dotenv()
-hf_token = os.getenv("HF_TOKEN")
+HUGGINGFACE_TOKEN = os.getenv("HF_TOKEN")
 
 # Configura las rutas
 model_path = "ruta/a/tu/modelo_LoRA"
