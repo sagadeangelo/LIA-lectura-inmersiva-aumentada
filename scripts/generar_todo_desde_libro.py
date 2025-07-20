@@ -1,41 +1,24 @@
-import os
-import shutil
-import subprocess
-from pathlib import Path
 import argparse
+import os
 
-# 1. Clonar el repositorio (solo si no está)
-if os.path.exists("LIA-lectura-inmersiva-aumentada"):
-    shutil.rmtree("LIA-lectura-inmersiva-aumentada")
+def procesar_libro(libro_path, ruta_destino):
+    print(f"📖 Procesando libro en: {libro_path}")
+    print(f"📁 Carpeta de destino: {ruta_destino}")
+    
+    # Aquí va la lógica real que transforma el texto, genera audio, imágenes, etc.
+    # Por ahora dejamos un mensaje de prueba:
+    if not os.path.exists(ruta_destino):
+        os.makedirs(ruta_destino)
+        print("✅ Carpeta creada")
 
-# Usa subprocess para ejecutar git clone (válido en scripts Python)
-subprocess.run(["git", "clone", "https://github.com/sagadeangelo/LIA-lectura-inmersiva-aumentada.git"])
+    with open(libro_path, "r", encoding="utf-8") as f:
+        contenido = f.read()
+        print(f"📝 El libro tiene {len(contenido.split())} palabras")
 
-# Cambiar directorio usando os
-os.chdir("LIA-lectura-inmersiva-aumentada")
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--libro", required=True, help="Ruta al archivo .txt del libro")
+    parser.add_argument("--ruta", required=True, help="Carpeta destino para guardar resultados")
+    args = parser.parse_args()
 
-# 2. Instalar dependencias necesarias con subprocess
-subprocess.run([
-    "pip", "install", "diffusers", "transformers", "accelerate", 
-    "safetensors", "peft", "compel", "python-dotenv"
-])
-
-# 3. Crear archivo .env con API keys (modifica los valores)
-env_content = """
-FREESOUND_API_KEY=tu_clave_de_freesound_aqui
-HUGGINGFACE_TOKEN=tu_token_de_huggingface_aqui
-""".strip()
-Path(".env").write_text(env_content)
-print("✅ .env creado")
-
-# 4. Procesar argumentos (de ejemplo, puedes modificar)
-parser = argparse.ArgumentParser()
-parser.add_argument("--libro", required=True, help="Ruta al archivo .txt del libro")
-parser.add_argument("--ruta", required=True, help="Carpeta del libro")
-args = parser.parse_args()
-
-# Aquí pondrías la lógica principal de tu script
-print(f"Procesando libro en: {args.libro}")
-print(f"Ruta para guardar resultados: {args.ruta}")
-
-# [Inserta aquí el resto de código que procesará el libro]
+    procesar_libro(args.libro, args.ruta)
