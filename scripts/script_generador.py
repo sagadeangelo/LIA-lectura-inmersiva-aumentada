@@ -36,9 +36,18 @@ unet = UNet2DConditionModel.from_pretrained("runwayml/stable-diffusion-v1-5", su
 
 # 🪄 Aplicar LoRA si hay
 for lora in loras:
-    lora_model = PeftModel.from_pretrained(unet, lora["ruta"])
-    unet = lora_model.merge_and_unload()
-    unet.to("cuda")
+    ruta_lora = lora.get("ruta") or lora.get("archivo")
+    if ruta_lora:
+        try:
+            lora_model = PeftModel.from_pretrained(unet, ruta_lora)
+            unet = lora_model.merge_and_unload()
+            unet.to("cuda")
+            print(f"✅ LoRA aplicado: {ruta_lora}")
+        except Exception as e:
+            print(f"❌ Error aplicando LoRA '{ruta_lora}': {e}")
+    else:
+        print("⚠️ LoRA ignorado: no se especificó 'ruta' ni 'archivo'.")
+
 
 # 🖼️ Crear pipeline
 pipe = StableDiffusionPipeline.from_pretrained(
