@@ -1,104 +1,189 @@
-# LIA – Lectura Inmersiva Aumentada
+# LIA — Lectura Inmersiva Aumentada
 
-Proyecto educativo que transforma libros en experiencias inmersivas mediante inteligencia artificial. Utiliza Flutter para la interfaz, Python para la generación de contenido visual y sonoro, y Stable Diffusion local para crear escenas ilustradas a partir del texto.
+> La evolución de la lectura hacia experiencias cinematográficas impulsadas por IA.
 
----
+![LIA Banner](https://lia.lasagadeangelo.com.mx/assets/logo.png)
 
-## 🚀 Características principales
+## ¿Qué es LIA?
 
-- Lectura inmersiva sincronizada con imágenes generadas por IA.
-- Sonidos ambientales automáticos basados en el contenido del texto.
-- Soporte para múltiples libros, capítulos y escenas.
-- Arquitectura local sin dependencia de servicios externos.
-- Integración con modelos personalizados (`.safetensors`, `.ckpt`, etc.)
+**LIA (Lectura Inmersiva Aumentada)** es una plataforma experimental de lectura cinematográfica impulsada por inteligencia artificial.
 
----
+Su objetivo es transformar libros e historias tradicionales en experiencias visuales inmersivas mediante:
 
-## 📁 Estructura del proyecto
+* 🎬 Generación automática de escenas
+* 🧠 Detección inteligente de personajes
+* 🎨 Creación visual con IA
+* 🔊 Narración y voces sintéticas
+* 🌌 Storytelling cinematográfico
+* ⚡ Automatización narrativa
 
-```
-LIA-lectura-inmersiva-aumentada/
-├── libros/              # Archivos .json con libros y escenas
-│   └── [LIBRO]/         # Carpeta por cada libro
-│       ├── escenas/     # Archivos de texto por escena
-│       ├── imagenes/    # Imágenes generadas por IA
-│       ├── sonidos/     # Audios ambientales descargados
-│       └── prompts/     # Prompts generados automáticamente
-├── modelos/             # Modelos IA locales (no incluidos)
-├── lib/                 # Código Flutter principal
-├── scripts/             # Scripts Python de generación
-├── venv/                # Entorno virtual local (ignorado)
-├── .gitignore
-├── README.md
-└── requirements.txt
-```
+LIA busca convertirse en una nueva forma de consumir historias, fusionando literatura, cine e inteligencia artificial.
 
 ---
 
-## ⚙️ Tecnologías utilizadas
+# 🌐 Sitio Oficial
 
-- **Flutter** – interfaz móvil y de escritorio.
-- **Python 3.11** – backend y automatización.
-- **Stable Diffusion local** – generación de imágenes por escena.
-- **Compel** – prompts IA con mayor precisión.
-- **Pixabay API** – sonidos ambientales libres.
-- **FFmpeg** – conversión y edición de audio.
-- **Git/GitHub** – control de versiones.
+🔗 [https://lia.lasagadeangelo.com.mx/](https://lia.lasagadeangelo.com.mx/)
 
 ---
 
-## 💾 Instalación local (modo desarrollador)
+# 🚀 Visión
 
-```bash
-git clone https://github.com/sagadeangelo/LIA-lectura-inmersiva-aumentada.git
-cd LIA-lectura-inmersiva-aumentada
+La lectura tradicional está cambiando.
 
-# Crear entorno virtual
-python -m venv venv
-venv\Scripts\activate  # En Linux/Mac: source venv/bin/activate
+LIA nace con la idea de construir una experiencia donde los libros ya no solo se leen:
 
-# Instalar dependencias
-pip install -r requirements.txt
+## Se viven.
 
-# Ejecutar script de generación de imágenes
-python scripts/generar_imagenes_desde_cache.py
-```
+Cada capítulo puede transformarse en:
 
----
-
-## ⚠️ Modelos IA (no incluidos en el repositorio)
-
-Este repositorio no contiene los modelos IA por su gran tamaño.
-
-Por favor, coloca tus modelos en la siguiente carpeta:
-
-```
-/modelos/
-```
-
-Archivos compatibles:
-- `.safetensors`
-- `.ckpt`
-- `.pth`
-
-Estos archivos deben ser configurados en tu archivo de parámetros JSON correspondiente.
+* escenas cinematográficas
+* secuencias visuales
+* personajes persistentes
+* ambientes dinámicos
+* experiencias inmersivas generadas por IA
 
 ---
 
-## 🧠 Créditos
+# ✨ Características Principales
 
-Proyecto desarrollado por [Miguel Tovar Amral](https://github.com/sagadeangelo) como parte del sistema educativo **LIA OS**.
+## 🎭 Detección Inteligente de Personajes
+
+Análisis automático de personajes principales y secundarios dentro de una historia.
+
+## 🎬 Generación Cinemática de Escenas
+
+Conversión de texto narrativo en prompts visuales optimizados.
+
+## 🧠 Pipeline IA Automatizado
+
+Integración modular para:
+
+* procesamiento narrativo
+* generación visual
+* automatización de escenas
+* composición narrativa
+
+## 🔊 Narración Inmersiva
+
+Integración futura con voces IA y lectura emocional.
+
+## 🌌 Experiencia Multimedia
+
+Combinación de:
+
+* literatura
+* IA generativa
+* video
+* audio
+* visual storytelling
 
 ---
 
-## 📄 Licencia
+# 🛠️ Stack Tecnológico
 
-Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+## IA y Generación
+
+* ComfyUI
+* Stable Diffusion
+* SDXL
+* GPT
+* Coqui TTS
+
+## Desarrollo
+
+* Python
+* APIs IA
+* Automatización modular
+* Procesamiento de texto
+
+## Infraestructura
+
+* GitHub
+* Google Colab
+* Pipeline híbrido local + nube
 
 ---
 
-## 📬 Contacto
+# 📸 Vista del Proyecto
 
-- Correo: miguel@sagadeangelo.com
-- Sitio web: [https://lasagadeangelo.com.mx](https://lasagadeangelo.com.mx)
+## Landing Oficial
 
+![Landing](https://lia.lasagadeangelo.com.mx/assets/preview.jpg)
+
+## Escenas Generadas
+
+* personajes cinematográficos
+* escenas dinámicas
+* ambientes inmersivos
+* narrativa visual automatizada
+
+---
+
+# 🧪 Estado del Proyecto
+
+LIA se encuentra actualmente en desarrollo activo.
+
+## Objetivos actuales
+
+* [x] Arquitectura base
+* [x] Generación de escenas IA
+* [x] Detección de personajes
+* [x] Pipeline modular
+* [ ] Experiencia web interactiva
+* [ ] App móvil
+* [ ] Narración IA avanzada
+* [ ] Plataforma SaaS para autores
+
+---
+
+# 📚 Universo Narrativo
+
+LIA actualmente se desarrolla utilizando el universo narrativo de:
+
+## *La Saga de Ángelo*
+
+como entorno experimental para:
+
+* generación visual
+* pruebas cinematográficas
+* personajes persistentes
+* escenas automatizadas
+
+---
+
+# 🔐 Propiedad Intelectual
+
+**LIA — Lectura Inmersiva Aumentada** es un proyecto original desarrollado por Miguel Tovar.
+
+Todo el contenido, conceptos, assets y arquitectura asociados al proyecto pertenecen a sus respectivos autores.
+
+---
+
+# 🤝 Contribuciones
+
+Actualmente el proyecto se encuentra en etapa de desarrollo privado/experimental.
+
+Sin embargo, futuras colaboraciones podrán incluir:
+
+* IA generativa
+* desarrollo frontend
+* sistemas narrativos
+* automatización multimedia
+* UX inmersiva
+
+---
+
+# 📬 Contacto
+
+🌐 [https://lia.lasagadeangelo.com.mx/](https://lia.lasagadeangelo.com.mx/)
+
+📧 Contacto profesional disponible mediante LinkedIn y sitio oficial.
+
+---
+
+# ⭐ LIA
+
+> No estamos construyendo solo una app de lectura.
+>
+> Estamos construyendo la próxima evolución de cómo las historias serán experimentadas.
