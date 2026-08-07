@@ -295,7 +295,7 @@ https://github.com/sagadeangelo
 
 LinkedIn
 
-https://www.linkedin.com
+[https://www.linkedin.com](https://www.linkedin.com/in/miguel-tovar-amaral-b14180124/)
 
 ---
 
