@@ -1,189 +1,310 @@
+<div align="center">
+
 # LIA — Lectura Inmersiva Aumentada
 
-> La evolución de la lectura hacia experiencias cinematográficas impulsadas por IA.
+### AI-Powered Reading • Storytelling • Publishing • Creativity
 
-![LIA Banner](https://lia.lasagadeangelo.com.mx/assets/logo.png)
+**Transforming books into cinematic, interactive and intelligent experiences.**
 
-## ¿Qué es LIA?
+🌐 https://lia-tech.com
 
-**LIA (Lectura Inmersiva Aumentada)** es una plataforma experimental de lectura cinematográfica impulsada por inteligencia artificial.
-
-Su objetivo es transformar libros e historias tradicionales en experiencias visuales inmersivas mediante:
-
-* 🎬 Generación automática de escenas
-* 🧠 Detección inteligente de personajes
-* 🎨 Creación visual con IA
-* 🔊 Narración y voces sintéticas
-* 🌌 Storytelling cinematográfico
-* ⚡ Automatización narrativa
-
-LIA busca convertirse en una nueva forma de consumir historias, fusionando literatura, cine e inteligencia artificial.
+</div>
 
 ---
 
-# 🌐 Sitio Oficial
+# 📖 What is LIA?
 
-🔗 [https://lia.lasagadeangelo.com.mx/](https://lia.lasagadeangelo.com.mx/)
+**LIA (Lectura Inmersiva Aumentada)** is an AI-powered ecosystem that reimagines how stories are created, published and experienced.
 
----
+Rather than replacing books, LIA expands them.
 
-# 🚀 Visión
+By combining Artificial Intelligence, visual storytelling and immersive technologies, LIA transforms traditional reading into dynamic cinematic experiences.
 
-La lectura tradicional está cambiando.
-
-LIA nace con la idea de construir una experiencia donde los libros ya no solo se leen:
-
-## Se viven.
-
-Cada capítulo puede transformarse en:
-
-* escenas cinematográficas
-* secuencias visuales
-* personajes persistentes
-* ambientes dinámicos
-* experiencias inmersivas generadas por IA
+Our vision is to become the operating system for the next generation of digital books.
 
 ---
 
-# ✨ Características Principales
+# 🚀 Vision
 
-## 🎭 Detección Inteligente de Personajes
+Books are evolving.
 
-Análisis automático de personajes principales y secundarios dentro de una historia.
+Static pages are becoming intelligent experiences.
 
-## 🎬 Generación Cinemática de Escenas
+LIA is building an ecosystem where every story can become:
 
-Conversión de texto narrativo en prompts visuales optimizados.
+- 🎬 Cinematic
+- 🎨 Visually generated
+- 🎧 Narrated with AI
+- 🧠 Context-aware
+- 📚 Interactive
+- 🌍 Multiplatform
 
-## 🧠 Pipeline IA Automatizado
-
-Integración modular para:
-
-* procesamiento narrativo
-* generación visual
-* automatización de escenas
-* composición narrativa
-
-## 🔊 Narración Inmersiva
-
-Integración futura con voces IA y lectura emocional.
-
-## 🌌 Experiencia Multimedia
-
-Combinación de:
-
-* literatura
-* IA generativa
-* video
-* audio
-* visual storytelling
+We believe the future of storytelling is immersive.
 
 ---
 
-# 🛠️ Stack Tecnológico
+# 🌟 The LIA Ecosystem
 
-## IA y Generación
+LIA is composed of several interconnected products.
 
-* ComfyUI
-* Stable Diffusion
-* SDXL
-* GPT
-* Coqui TTS
+## 📖 LIA Reader
 
-## Desarrollo
+An immersive reading experience powered by AI.
 
-* Python
-* APIs IA
-* Automatización modular
-* Procesamiento de texto
+Features:
 
-## Infraestructura
-
-* GitHub
-* Google Colab
-* Pipeline híbrido local + nube
+- Smart reading modes
+- AI narration
+- Dynamic illustrations
+- Ambient audio
+- Cinematic scene generation
 
 ---
 
-# 📸 Vista del Proyecto
+## ✍️ LIA Publish
 
-## Landing Oficial
+A publishing platform designed for authors.
 
-![Landing](https://lia.lasagadeangelo.com.mx/assets/preview.jpg)
+Capabilities include:
 
-## Escenas Generadas
-
-* personajes cinematográficos
-* escenas dinámicas
-* ambientes inmersivos
-* narrativa visual automatizada
-
----
-
-# 🧪 Estado del Proyecto
-
-LIA se encuentra actualmente en desarrollo activo.
-
-## Objetivos actuales
-
-* [x] Arquitectura base
-* [x] Generación de escenas IA
-* [x] Detección de personajes
-* [x] Pipeline modular
-* [ ] Experiencia web interactiva
-* [ ] App móvil
-* [ ] Narración IA avanzada
-* [ ] Plataforma SaaS para autores
+- Book organization
+- AI-assisted editing
+- Cover generation
+- Metadata creation
+- EPUB generation
+- PDF export
+- Interactive LIA format
 
 ---
 
-# 📚 Universo Narrativo
+## 🎨 LIA Styalo
 
-LIA actualmente se desarrolla utilizando el universo narrativo de:
+Creative AI workspace for authors.
 
-## *La Saga de Ángelo*
+Includes:
 
-como entorno experimental para:
-
-* generación visual
-* pruebas cinematográficas
-* personajes persistentes
-* escenas automatizadas
-
----
-
-# 🔐 Propiedad Intelectual
-
-**LIA — Lectura Inmersiva Aumentada** es un proyecto original desarrollado por Miguel Tovar.
-
-Todo el contenido, conceptos, assets y arquitectura asociados al proyecto pertenecen a sus respectivos autores.
+- Character creation
+- Environment generation
+- Visual references
+- Consistent art direction
+- Story concept design
 
 ---
 
-# 🤝 Contribuciones
+## 🌎 Future Products
 
-Actualmente el proyecto se encuentra en etapa de desarrollo privado/experimental.
+The LIA ecosystem will continue expanding with tools focused on:
 
-Sin embargo, futuras colaboraciones podrán incluir:
-
-* IA generativa
-* desarrollo frontend
-* sistemas narrativos
-* automatización multimedia
-* UX inmersiva
-
----
-
-# 📬 Contacto
-
-🌐 [https://lia.lasagadeangelo.com.mx/](https://lia.lasagadeangelo.com.mx/)
-
-📧 Contacto profesional disponible mediante LinkedIn y sitio oficial.
+- Translation
+- Audiobooks
+- AI companions
+- Learning
+- Interactive storytelling
+- Marketplace
+- Creator economy
 
 ---
 
-# ⭐ LIA
+# ✨ Core Features
 
-> No estamos construyendo solo una app de lectura.
->
-> Estamos construyendo la próxima evolución de cómo las historias serán experimentadas.
+## 🎭 Intelligent Character Detection
+
+Automatically identifies protagonists, secondary characters and recurring entities.
+
+---
+
+## 🎬 Cinematic Scene Generation
+
+Converts narrative text into optimized prompts for image generation.
+
+---
+
+## 🧠 AI Narrative Pipeline
+
+Automated workflow including:
+
+- Text analysis
+- Scene extraction
+- Character persistence
+- Visual generation
+- Audio synchronization
+
+---
+
+## 🔊 AI Voice Narration
+
+Future emotional narration with synthetic voices.
+
+---
+
+## 🌌 Immersive Reading
+
+Combining:
+
+- Literature
+- AI
+- Images
+- Sound
+- Animation
+- Visual storytelling
+
+---
+
+# 🏗 Architecture
+
+```
+Book
+      │
+      ▼
+Narrative Analysis
+      │
+      ▼
+Character Detection
+      │
+      ▼
+Scene Extraction
+      │
+      ▼
+Prompt Generation
+      │
+      ▼
+Image Generation
+      │
+      ▼
+Audio Generation
+      │
+      ▼
+Immersive Reading
+```
+
+---
+
+# ⚙ Technology Stack
+
+## Artificial Intelligence
+
+- GPT
+- Stable Diffusion
+- SDXL
+- ComfyUI
+- Coqui TTS
+
+## Development
+
+- Python
+- Flutter
+- FastAPI
+- REST APIs
+- Modular Architecture
+
+## Infrastructure
+
+- GitHub
+- Google Colab
+- Local AI
+- Cloud Processing
+
+---
+
+# 📷 Project Preview
+
+## Official Website
+
+🌐 https://lia-tech.com
+
+---
+
+## AI Generated Scenes
+
+- Cinematic characters
+- Dynamic environments
+- Story-driven illustrations
+- Automated visual storytelling
+
+---
+
+# 🧪 Current Development Status
+
+| Module | Status |
+|---------|--------|
+| Core Architecture | ✅ |
+| AI Pipeline | ✅ |
+| Character Detection | ✅ |
+| Scene Generation | ✅ |
+| Website | ✅ |
+| Mobile App | 🚧 |
+| AI Narration | 🚧 |
+| SaaS Platform | 🚧 |
+| Author Marketplace | 🚧 |
+
+---
+
+# 📚 Experimental Universe
+
+LIA currently uses **La Saga de Ángelo** as its primary research and testing environment.
+
+This allows continuous experimentation with:
+
+- Persistent characters
+- Long-form storytelling
+- AI-generated cinematics
+- Narrative consistency
+
+---
+
+# 🎯 Mission
+
+Empower writers, readers and creators through Artificial Intelligence.
+
+LIA aims to democratize immersive storytelling by providing accessible AI tools that enhance creativity rather than replace it.
+
+---
+
+# 🤝 Contributing
+
+LIA is currently under active private development.
+
+Future collaboration opportunities will include:
+
+- AI Engineering
+- Flutter Development
+- Python Development
+- Narrative Systems
+- UX/UI
+- Creative Technologies
+
+---
+
+# 🔒 Intellectual Property
+
+LIA — Lectura Inmersiva Aumentada is an original project created by **Miguel Tovar**.
+
+All concepts, software architecture, visual assets and associated intellectual property belong to their respective owners.
+
+---
+
+# 🌐 Official Links
+
+Website
+
+https://lia-tech.com
+
+GitHub
+
+https://github.com/sagadeangelo
+
+LinkedIn
+
+https://www.linkedin.com
+
+---
+
+<div align="center">
+
+## ⭐ The Future of Storytelling Starts Here
+
+*"We're not just building another reading app.*
+
+*We're building the future of how humanity experiences stories."*
+
+</div>
